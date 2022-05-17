@@ -1,0 +1,30 @@
+{
+  "name": "feku",
+  "version": "0.0.1",
+  "description": "generate intelligent fake data",
+  "author": "kdabir",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "feku": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib/**/*.js"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^6.1.1",
+    "chance": "^1.1.8",
+    "date-fns": "^2.28.0",
+    "minimist": "^1.2.6"
+  }
+}
