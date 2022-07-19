@@ -7,6 +7,8 @@ Generate intelligent random data based on a spec file.
 - CLI
 - examples
 - helper functions to generate random data
+- customizable output JSON lines (jsonld / ndjson) or JSON Array
+- custom spec files to generate new rows based on previously generated data (for example account balance must take into account previous transaction as well)
 
 
 ## Usage
