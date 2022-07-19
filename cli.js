@@ -16,7 +16,7 @@ const opts = minimist(process.argv.slice(2), {
     }
 });
 
-console.log(opts)
+// console.log(opts)
 
 if (opts.v) {
     printVersion()
