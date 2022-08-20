@@ -30,6 +30,7 @@ export function* generate(context = {}, rowBuilder, cb = null) {
     context.index = 0
     context.fn = fn
 
+    console.log(context.seed)
     const shouldCallback = (typeof cb === 'function')
 
     faker.seed(context.seed);

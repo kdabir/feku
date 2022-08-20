@@ -1,7 +1,7 @@
 {
   "name": "feku",
-  "version": "0.0.1",
-  "description": "generate intelligent fake data",
+  "version": "0.1.1",
+  "description": "Generate intelligent fake data",
   "author": "kdabir",
   "type": "module",
   "main": "index.js",
@@ -25,6 +25,6 @@
     "@faker-js/faker": "^6.1.1",
     "chance": "^1.1.8",
     "date-fns": "^2.28.0",
-    "minimist": "^1.2.6"
+    "meow": "^10.1.3"
   }
 }
