@@ -25,8 +25,8 @@ import * as fn from './lib/index.js';
  * @return {*[]} array of rows or undefined if callback is provided
  */
 
-export function* generate(context, rowBuilder, cb = null) {
-    context.count ??= 10
+export function* generate(context = {}, rowBuilder, cb = null) {
+    context.count = context.count || 10
     context.index = 0
     context.fn = fn
 
