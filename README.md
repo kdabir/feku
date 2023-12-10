@@ -11,14 +11,22 @@ Generate intelligent random data based on a spec file.
 - custom spec files to generate new rows based on previously generated data (for example account balance must take into account previous transaction as well)
 
 
-## Usage
+## Installation
+
+- using PNPM `pnpm add -D feku`
+- using NPM `npm install --save-dev feku`
+
+## Using as a CLI
+
+> [!NOTE]
+> When installed locally in a project using pnpm, run CLI using PNPM `pnpm feku <spec-file.js> [options]`
 
 Options
 - `--count` or `-n` accepts number of items to generate 
 - `--array` or `-a`
 
-Examples:
 
+Examples:
 
 `feku examples/movies.js` by default produces json lines (jsonld / ndjson)
 
@@ -97,6 +105,34 @@ export const initialContext = {
     count: 30
 }
 ```
+
+## Using as a Library
+
+We can use feku to generate data on the fly in browser/node or any other javascript environment. Following is an example:
+
+```
+import { generate } from "feku";
+
+export function generateData(n = 10) {
+  const data = [];
+
+  function rowBuilder({ faker }) {
+    return {
+      name: faker.name.findName(),
+      age: faker.datatype.number({ min: 1, max: 100 }),
+      city: faker.address.city(),
+      phone: faker.phone.phoneNumber("(+##) #### ### ###")
+    };
+  }
+
+  for (let row of generate({ count: n }, rowBuilder)) {
+    data.push(row);
+  }
+
+  return data;
+}
+```
+
 
 
 ## Built on libraries
